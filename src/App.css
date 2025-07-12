@@ -25,3 +25,43 @@
 .text-reveal span:nth-child(3) {
   animation-delay: 0.5s;
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-appear {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* @keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.text-appear {
+  opacity: 0;
+  transform: scale(0.5) translateY(30px);
+  transition: none;
+}
+
+.text-appear.visible {
+  animation: appear 0.6s ease-out forwards;
+} */
